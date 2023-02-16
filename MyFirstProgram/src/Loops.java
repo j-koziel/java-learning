@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Loops {
   public static void main(String[] args) {
@@ -14,17 +15,20 @@ public class Loops {
     Scanner scanner = new Scanner(System.in);
     String name = "";
 
-    do {
-      System.out.print("Enter your name: ");
-      name = scanner.nextLine();
-    } while (name.isEmpty());
+    // do {
+    //   System.out.print("Enter your name: ");
+    //   name = scanner.nextLine();
+    // } while (name.isEmpty());
 
     System.out.println("Hello " + name);
 
     scanner.close();
 
     // NESTED LOOPS
-    Loops.nestLoops();
+    // Loops.nestLoops();
+
+    // FOR-EACH LOOPS
+    Loops.forEach();
   }
 
   public static void nestLoops() {
@@ -51,5 +55,25 @@ public class Loops {
     }
 
     scanner.close();
+  }
+
+  // for-each loops
+  public static void forEach() {
+    // a traversing technique to iterate through an
+    // array or collection
+    // less steps, more readable
+    // less flexible
+
+    // String[] animals = {"cat", "dog", "rat", "bird"};
+    ArrayList<String> animals = new ArrayList<String>();
+
+    animals.add("cat");
+    animals.add("dog");
+    animals.add("rat");
+    animals.add("bird");
+
+    for (String i : animals) {
+      System.out.println(i);
+    }
   }
 }
