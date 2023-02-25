@@ -36,6 +36,12 @@ public class Methods {
     // flags
     // adds an effect to the output based on the flag
     System.out.printf("You have this much money %,f", myDouble);
+
+    // final keyword
+    // this keyword is used when a value is not going to be changed
+    final double pi = 3.14159;
+
+    System.out.println(pi);
   }
 
   // type of method -> return type -> method def
