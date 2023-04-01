@@ -2,9 +2,9 @@ package scope;
 
 import java.util.Random;
 
-public class DiceRoller {
+class DiceRoller {
 
-    Random random = new Random();
+    Random random;
     int number;
     DiceRoller() {
         random = new Random();
