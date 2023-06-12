@@ -11,6 +11,10 @@ public class Car {
         this.setYear(year);
     }
 
+    Car(Car x) {
+        this.copy(x);
+    }
+
 //    Getters
     public String getMake() {
         return make;
@@ -35,5 +39,13 @@ public class Car {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+
+    // We use the getters and setters to properly copy the methods from the provided object to the current object
+    public void copy(Car x) {
+        this.setMake(x.getMake());
+        this.setModel(x.getModel());
+        this.setYear(x.getYear());
     }
 }
